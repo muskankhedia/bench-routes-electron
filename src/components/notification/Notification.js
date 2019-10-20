@@ -22,7 +22,8 @@ export default class Notification extends React.Component {
   render() {
     return (
       <div>
-        <div className="notification-icon"
+        <div
+          className="notification-icon"
           style={{
             cursor: 'pointer',
           }}
