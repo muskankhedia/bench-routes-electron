@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Submenu from '../layouts/Submenu';
 
-interface MonitoringModulePropsTypes {}
+interface FPingModulePropsTypes {}
 
-interface MonitoringModuleStateTypes {
+interface FPingModuleStateTypes {
   routes: object;
   sAddress: string;
 }
 
-export default class Monitoring extends React.Component<
-  MonitoringModulePropsTypes,
-  MonitoringModuleStateTypes
+export default class FloodPing extends Component<
+  FPingModulePropsTypes,
+  FPingModuleStateTypes
 > {
-  constructor(props: MonitoringModulePropsTypes) {
+  constructor(props: FPingModulePropsTypes) {
     super(props);
 
     this.state = {
@@ -30,11 +30,11 @@ export default class Monitoring extends React.Component<
     return (
       <>
         <Submenu
-          module="monitoring"
+          module="ping"
           submodule=""
           getAddress={this.getAddressSubmenu}
         />
-        <div>This is the ping page.</div>
+        <div>This is the flood ping page.</div>
       </>
     );
   }

@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Submenu from '../layouts/Submenu';
 
-interface MonitoringModulePropsTypes {}
+interface JitterModulePropsTypes {}
 
-interface MonitoringModuleStateTypes {
+interface JitterModuleStateTypes {
   routes: object;
   sAddress: string;
 }
 
-export default class Monitoring extends React.Component<
-  MonitoringModulePropsTypes,
-  MonitoringModuleStateTypes
+export default class Jitter extends Component<
+  JitterModulePropsTypes,
+  JitterModuleStateTypes
 > {
-  constructor(props: MonitoringModulePropsTypes) {
+  constructor(props: JitterModulePropsTypes) {
     super(props);
 
     this.state = {
@@ -30,11 +30,11 @@ export default class Monitoring extends React.Component<
     return (
       <>
         <Submenu
-          module="monitoring"
+          module="ping"
           submodule=""
           getAddress={this.getAddressSubmenu}
         />
-        <div>This is the ping page.</div>
+        <div>This is the jitter page.</div>
       </>
     );
   }
